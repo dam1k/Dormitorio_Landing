@@ -1,42 +1,41 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { models, model } from "@/app/data";
-// import { motion, AnimatePresence } from "framer-motion";
-function Slider() {
+import { modelsArr, model } from "@/app/data";
+import { motion, AnimatePresence } from "framer-motion";
+function Gallery() {
   const [currentImage, setCurrentImage] = useState<number>(0);
   // const [fadeImg, setFadeImg] = useState<boolean>(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (currentImage !== models.length - 1) {
+      if (currentImage !== modelsArr.length - 1) {
         setCurrentImage((prev: number) => prev + 1);
       } else {
         setCurrentImage(0);
       }
-      // setFadeImg(false);
     }, 2000);
-    // const fadeInterval = setInterval(() => {
-    //   setFadeImg(true);
-    // }, 1500);
 
     return () => {
       clearInterval(interval);
-      // clearInterval(fadeInterval);
     };
   }, [currentImage]);
 
   return (
     <div className="flex">
-      {models.map((model: model, index: number) => {
+      {modelsArr.map((model: model, index: number) => {
         return (
           <div
             key={model.id}
             className={`${index === currentImage ? "block" : "hidden"} 
-             w-full h-[600px] rounded-[20px] overflow-hidden transition-all`}
+             w-full h-[600px] rounded-[20px] overflow-hidden transition-all relative`}
           >
             <img src={model.img} className="w-full h-full object-cover" />
-            {model.name}
+            {/*<div className="absolute top-[25px] left-[25px] right-[25px]">*/}
+            {/*  <h1 className="text-[55px] leading-[53px] text-white">*/}
+            {/*    {model.name}*/}
+            {/*  </h1>*/}
+            {/*</div>*/}
           </div>
         );
       })}
@@ -44,4 +43,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default Gallery;

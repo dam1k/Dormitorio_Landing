@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { CollectionSelect } from "./Select";
+// import { CollectionSelect } from "./Select";
 
 interface item {
   name: string;
@@ -43,7 +43,7 @@ function handleScroll(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 
 const Header = () => {
   return (
-    <header className="container">
+    <header className="container min-[1025px]:block hidden">
       <nav className="mt-5 flex !items-center">
         <div className="flex gap-[45px] text-black text-[14px] flex-1">
           <Link href="#contacts" onClick={handleScroll}>
@@ -59,10 +59,10 @@ const Header = () => {
         </Link>
 
         <div className="flex gap-[45px] text-black text-[14px] items-center flex-1 justify-end">
-          <Link href="/" onClick={handleScroll}>
-            Acasă
+          <Link href="#new-collection" onClick={handleScroll}>
+            Colecția nouă
           </Link>
-          <CollectionSelect />
+          {/*<CollectionSelect />*/}
           <div className="flex text-[14px] shrink-0 gap-[7px]">
             <Image height="30" width="30" alt="" src="/Consultant.svg" />
             <div className="flex flex-col">
