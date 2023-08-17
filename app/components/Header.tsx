@@ -1,33 +1,9 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import { CollectionSelect } from "./Select";
 
-interface item {
-  name: string;
-  href: string;
-}
-
-const items: item[] = [
-  {
-    name: "Contacte",
-    href: "#contacts",
-  },
-  {
-    name: "Despre noi",
-    href: "#about",
-  },
-  {
-    name: "Acasă",
-    href: "#home",
-  },
-  {
-    name: "Coleție nouă",
-    href: "#new-collection",
-  },
-];
+const phoneNumber = "(+373) 69 692 069";
 
 function handleScroll(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   e.preventDefault();
@@ -43,11 +19,11 @@ function handleScroll(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 
 const Header = () => {
   return (
-    <header className="container min-[1025px]:block hidden">
-      <nav className="mt-5 flex !items-center">
-        <div className="flex gap-[45px] text-black text-[14px] flex-1">
+    <header className="relative bg-[#1d1d1d]/[0.5] backdrop-blur !z-[100] min-[1025px]:block hidden ">
+      <nav className="container !pt-5 !pb-5 max-[1024px]!mt-[65px] flex !items-center">
+        <div className="flex gap-[45px] text-white text-[14px] flex-1">
           <Link href="#contacts" onClick={handleScroll}>
-            Contacte
+            Colaborează cu noi
           </Link>
           <Link href="#about" onClick={handleScroll}>
             Despre noi
@@ -55,19 +31,23 @@ const Header = () => {
         </div>
 
         <Link href="/" className="flex-1 flex justify-center">
-          <Image src="/logo.png" width="150" height="100" alt="dormitorio" />
+          <Image
+            src="/DormitorioLogo.png"
+            width="200"
+            height="200"
+            alt="dormitorio"
+          />
         </Link>
 
-        <div className="flex gap-[45px] text-black text-[14px] items-center flex-1 justify-end">
+        <div className="flex gap-[45px] text-white text-[14px] items-center flex-1 justify-end">
           <Link href="#new-collection" onClick={handleScroll}>
             Colecția nouă
           </Link>
-          {/*<CollectionSelect />*/}
           <div className="flex text-[14px] shrink-0 gap-[7px]">
             <Image height="30" width="30" alt="" src="/Consultant.svg" />
             <div className="flex flex-col">
-              <span className="text-black/[0.35]">Telefon mobil</span>
-              <h3 className="">(+373) 69 692 069</h3>
+              <span className="text-white">Telefon mobil</span>
+              <h3 className="">{phoneNumber}</h3>
             </div>
           </div>
         </div>

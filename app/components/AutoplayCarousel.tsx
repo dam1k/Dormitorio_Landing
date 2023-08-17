@@ -6,7 +6,7 @@ import CarouselItem from "./CarouselItem";
 
 export default function AutoplayCarousel() {
   return (
-    <div className="carousel-container" id="new-collection">
+    <div className="carousel-container max-[1024px]:hidden" id="new-collection">
       <div className="carousel-track">
         {Object.keys(modelsObj).map((detailKey, index) => {
           return (

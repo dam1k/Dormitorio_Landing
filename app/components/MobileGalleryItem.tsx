@@ -12,8 +12,8 @@ export default function CarouselItem({
   country: string;
 }) {
   return (
-    <div className="carousel-card flex flex-col items-start">
-      <img src={imgUrl} alt="mobila" />
+    <div className="min-[1025px]:hidden ">
+      <img src={imgUrl} alt="mobila" className="rounded-[10px]" />
       <div className="flex justify-between w-full mt-[15px]">
         <h2 className="text-[25px] flex justify-start gap-[5px]">
           {imgTitle}
@@ -24,7 +24,7 @@ export default function CarouselItem({
           <span className="text-[12px]">MDL</span>
         </h2>
       </div>
-      <div className="bg-black/[0.05] flex gap-[5px] rounded-[7px] px-[6px] py-[3px] text-[14px] items-center mt-[10px]">
+      <div className="inline-flex flex-0 bg-black/[0.05]  gap-[5px] rounded-[7px] px-[6px] py-[3px] text-[14px] items-center mt-[10px]">
         <img className="w-[13px] h-[12px]" src="/Size.svg" alt="" />
         {size1.join(" x ")}
       </div>

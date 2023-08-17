@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CollectionSelect } from "./Select";
+import MobileMenu from "../components/MobilMenu";
+import { AnimatePresence } from "framer-motion";
 
 interface item {
   name: string;
@@ -42,41 +44,32 @@ function handleScroll(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 }
 
 const MobileHeader = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <header className="container max-[1024px]:block hidden">
-      <nav className="mt-[15px] flex justify-between w-full items-center">
-        {/*<div className="flex gap-[45px] text-black text-[14px] flex-1">*/}
-        {/*  <Link href="#contacts" onClick={handleScroll}>*/}
-        {/*    Contacte*/}
-        {/*  </Link>*/}
-        {/*  <Link href="#about" onClick={handleScroll}>*/}
-        {/*    Despre noi*/}
-        {/*  </Link>*/}
-        {/*</div>*/}
+    <>
+      <header className="max-[1024px]:fixed min-[1025px]:hidden bg-[#1d1d1d]/[0.75] backdrop-blur top-0 left-0 p-[10px] w-full !z-[10000]">
+        <nav className="flex justify-between items-center">
+          <Link href="/">
+            <Image
+              src="/DormitorioLogo.png"
+              width="150"
+              height="100"
+              alt="dormitorio"
+            />
+          </Link>
 
-        <Link href="/">
-          <Image src="/logo.png" width="150" height="100" alt="dormitorio" />
-        </Link>
-
-        <button className="p-[10px] rounded-[7px] bg-black/[0.05]">
-          <img src="/Menu.svg" alt="menu" />
-        </button>
-
-        {/*<div className="flex gap-[45px] text-black text-[14px] items-center flex-1 justify-end">*/}
-        {/*  <Link href="#new-collection" onClick={handleScroll}>*/}
-        {/*    Colecția nouă*/}
-        {/*  </Link>*/}
-        {/*  /!*<CollectionSelect />*!/*/}
-        {/*  <div className="flex text-[14px] shrink-0 gap-[7px]">*/}
-        {/*    <Image height="30" width="30" alt="" src="/Consultant.svg" />*/}
-        {/*    <div className="flex flex-col">*/}
-        {/*      <span className="text-black/[0.35]">Telefon mobil</span>*/}
-        {/*      <h3 className="">(+373) 69 692 069</h3>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-      </nav>
-    </header>
+          <button
+            className="p-[10px] rounded-[7px] bg-black/[0.05]"
+            onClick={() => setShowMenu(true)}
+          >
+            <img src="/Menu.svg" alt="menu" />
+          </button>
+        </nav>
+      </header>
+      <AnimatePresence>
+        {showMenu && <MobileMenu setShowMenu={setShowMenu} />}
+      </AnimatePresence>
+    </>
   );
 };
 

@@ -57,7 +57,7 @@ export const modelsArr: model[] = [
     size2: [180, 200],
     stock: 2,
     img: "/mobila.jpg",
-    price: 29000,
+    price: 29,
   },
   {
     id: nanoid(),
@@ -67,7 +67,7 @@ export const modelsArr: model[] = [
     size2: [180, 200],
     stock: 2,
     img: "/mobila2.jpg",
-    price: 29000,
+    price: 29,
   },
   {
     id: nanoid(),
@@ -77,7 +77,7 @@ export const modelsArr: model[] = [
     size2: [180, 200],
     stock: 2,
     img: "/mobila3.jpg",
-    price: 29000,
+    price: 29,
   },
   {
     id: nanoid(),
@@ -87,7 +87,7 @@ export const modelsArr: model[] = [
     size2: [180, 200],
     stock: 2,
     img: "/mobila.jpg",
-    price: 29000,
+    price: 29,
   },
   {
     id: nanoid(),
@@ -97,7 +97,7 @@ export const modelsArr: model[] = [
     size2: [180, 200],
     stock: 2,
     img: "/mobila2.jpg",
-    price: 29000,
+    price: 29,
   },
   {
     id: nanoid(),
@@ -107,7 +107,7 @@ export const modelsArr: model[] = [
     size2: [180, 200],
     stock: 2,
     img: "/mobila3.jpg",
-    price: 29000,
+    price: 29,
   },
 ];
 
@@ -120,7 +120,7 @@ export const modelsObj: any = {
     size2: [180, 200],
     stock: 2,
     imgUrl: "/mobila.jpg",
-    price: 29000,
+    price: 29,
   },
   1: {
     id: nanoid(),
@@ -130,7 +130,7 @@ export const modelsObj: any = {
     size2: [180, 200],
     stock: 2,
     imgUrl: "/mobila2.jpg",
-    price: 29000,
+    price: 29,
   },
   2: {
     id: nanoid(),
@@ -140,7 +140,7 @@ export const modelsObj: any = {
     size2: [180, 200],
     stock: 2,
     imgUrl: "/mobila3.jpg",
-    price: 29000,
+    price: 29,
   },
   3: {
     id: nanoid(),
@@ -150,7 +150,7 @@ export const modelsObj: any = {
     size2: [180, 200],
     stock: 2,
     imgUrl: "/mobila.jpg",
-    price: 29000,
+    price: 29,
   },
   4: {
     id: nanoid(),
@@ -158,7 +158,7 @@ export const modelsObj: any = {
     country: "Italia",
     size1: [234, 232, 23],
     size2: [180, 200],
-    stock: 2,
+    stock: 29,
     imgUrl: "/mobila2.jpg",
     price: 29000,
   },
@@ -170,6 +170,6 @@ export const modelsObj: any = {
     size2: [180, 200],
     stock: 2,
     imgUrl: "/mobila3.jpg",
-    price: 29000,
+    price: 29,
   },
 };

@@ -1,8 +1,7 @@
 import React from "react";
+import About from "../components/About";
 
 const content = {
-  desc: `Dormitorio – un brand de mobilă inspirată din cele mai bune tehnici ale design-ului italian. 
-  Marcă înregistrată în Republica Moldova, dormitoarele asigură o calitate superioară, iar clienții noștri pot alege dormitorul perfect dintr-o gamă diversă de opțiuni.`,
   copyright: "© Dormitorio 2023. All rights reserved.",
   phone: "(+373) 69 692 069",
   email: "info@dormtiorio.md",
@@ -12,31 +11,30 @@ const content = {
 
 function Footer() {
   return (
-    <div className="container grid grid-cols-2 gap-[25px] !mb-[100px]">
-      <div className="flex flex-col gap-[150px]">
-        <p className="max-w-[600px]">{content.desc}</p>
-        <p>{content.copyright}</p>
-      </div>
-      <div className="flex flex-col gap-[10px]">
-        <div className="flex gap-[150px]">
-          <div className="flex flex-col gap-[20px] flex-1">
-            <h2 className="text-[25px]">Informatii de contact</h2>
-            <div>
-              <span className="text-black/[0.45]">Phone</span>
-              <p>{content.phone}</p>
-            </div>
-            <div>
-              <span className="text-black/[0.45]">Email</span>
-              <p>{content.email}</p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-[20px] flex-1">
-            <h2 className="text-[25px]">Showrooms</h2>
-            <p>{content.showRoom}</p>
-          </div>
+    <div
+      className="container max-[1024px]:grid-cols-1 grid min-[1025px]:grid-cols-2 gap-[75px] !mb-[100px] max-[1024px]:mt-[75px]"
+      id="about"
+    >
+      {/*<div className="flex flex-col max-[1024px]:gap-[75px] min-[1025px]:gap-[150px]">*/}
+      {/*<p className="max-[1024px]:hidden">{content.copyright}</p>*/}
+      {/*</div>*/}
+      {/*<div className="flex flex-col gap-[10px]">*/}
+      {/*<div className="flex max-[1024px]:flex-col max-[1024px]:gap-[75px] min-[1025px]:gap-[150px]">*/}
+      <div className="flex flex-col gap-[20px]">
+        <h2 className="text-[25px]">Informatii de contact</h2>
+        <div>
+          <span className="text-black/[0.45]">Phone</span>
+          <p>{content.phone}</p>
         </div>
-        <p>Termeni și condiții</p>
-        <div className="flex flex-col"></div>
+        <div>
+          <span className="text-black/[0.45]">Email</span>
+          <p>{content.email}</p>
+        </div>
+      </div>
+      <div className="flex flex-col gap-[20px]">
+        <h2 className="text-[25px]">Showrooms</h2>
+        <p>{content.showRoom}</p>
+        <p>{content.copyright}</p>
       </div>
     </div>
   );
