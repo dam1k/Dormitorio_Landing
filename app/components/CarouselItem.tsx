@@ -4,16 +4,33 @@ export default function CarouselItem({
   size1,
   price,
   country,
+  colSpan,
+  rowSpan,
+  rowStart,
 }: {
   imgUrl: any;
   imgTitle: String;
   size1: number[];
   price: number;
   country: string;
+  colSpan: number;
+  rowSpan: number;
+  rowStart?: number;
 }) {
   return (
-    <div className="carousel-card flex flex-col items-start">
-      <img src={imgUrl} alt="mobila" />
+    <div
+      className={`relative flex flex-col items-start ${
+        colSpan === 1 ? "col-span-1" : "col-span-2"
+      } ${rowSpan === 1 ? "row-span-1" : "row-span-2"}
+      ${rowStart && rowStart === 4 ? "row-start-4" : ""}`}
+    >
+      <div className="overflow-hidden rounded-[15px] rounded-[15px] w-full">
+        <img
+          src={imgUrl}
+          className="cursor-pointer w-full min-h-full hover:scale-110 transition-all"
+          alt="mobila"
+        />
+      </div>
       <div className="flex justify-between w-full mt-[15px]">
         <h2 className="text-[25px] flex justify-start gap-[5px]">
           {imgTitle}

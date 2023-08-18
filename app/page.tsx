@@ -17,7 +17,7 @@ export default function Home() {
       <div className="!mt-[175px] max-[1024px]:!mt-[65px] flex flex-col w-full container">
         <div className="flex justify-between min-[1025px]:justify-end min-[1025px]:gap-[50px] items-start">
           <span className="text-black/[0.5] text-[12px]">(Collection)</span>
-          <h1 className="text-[65px] relative z-[10] mb-[100px] max-[1024px]:leading-[135%] max-[1024px]:mb-[50px] min-[1025px]:leading-[69px] max-[1024px]:text-[20px] ">
+          <h1 className="text-[65px] relative z-[10] max-[1024px]:leading-[135%] max-[1024px]:mb-[50px] min-[1025px]:leading-[69px] max-[1024px]:text-[20px] ">
             {brandName}:{" "}
             <span className="text-black/[0.5]">Colecția noastră</span>
           </h1>

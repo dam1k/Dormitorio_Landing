@@ -20,7 +20,7 @@ function handleScroll(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 const Header = () => {
   return (
     <header className="relative bg-[#1d1d1d]/[0.5] backdrop-blur !z-[100] min-[1025px]:block hidden ">
-      <nav className="container !pt-5 !pb-5 max-[1024px]!mt-[65px] flex !items-center">
+      <nav className="container !pt-4 !pb-4 max-[1024px]!mt-[65px] flex !items-center">
         <div className="flex gap-[45px] text-white text-[14px] flex-1">
           <Link href="#contacts" onClick={handleScroll}>
             Colaborează cu noi
@@ -33,8 +33,8 @@ const Header = () => {
         <Link href="/" className="flex-1 flex justify-center">
           <Image
             src="/DormitorioLogo.png"
-            width="200"
-            height="200"
+            width="175"
+            height="175"
             alt="dormitorio"
           />
         </Link>
