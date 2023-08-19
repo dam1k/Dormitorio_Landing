@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
-// useEffect(())
 function ImageFull({
   imgUrl,
   setShowImage,
@@ -10,11 +9,6 @@ function ImageFull({
   setShowImage: any;
 }) {
   const imgRef = useRef<HTMLImageElement>(null);
-  // useEffect(() => {
-  //   document.body.style.position = "fixed";
-  //
-  //   return () => (document.body.style.position = "relative");
-  // }, []);
 
   function handleOverlayClick(e: React.MouseEvent) {
     if (e.target !== imgRef.current) {

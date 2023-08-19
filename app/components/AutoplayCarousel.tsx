@@ -1,25 +1,18 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { modelsObj } from "../data";
 import CarouselItem from "./CarouselItem";
 import ImageFull from "./ImageFull";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function AutoplayCarousel() {
   const [showImage, setShowImage] = useState("");
-
-  useEffect(() => {
-    if (showImage) {
-      document.body.style.height = "100vh";
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.height = "100%";
-      document.body.style.overflowY = "auto";
-    }
-  }, [showImage]);
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       className="max-[1024px]:hidden !mt-[175px] max-[1024px]:!mt-[65px]"
       id="new-collection"
     >
@@ -98,17 +91,11 @@ export default function AutoplayCarousel() {
           setShowImage={setShowImage}
         />
       </div>
-      {/*<div className="absolute cursor-pointer active:opacity-80 transition-all top-[45%] translate-y-[-50%] left-[10px] bg-[#fff] w-[50px] h-[50px] p-[10px] rounded-[50%]">*/}
-      {/*  <img src="/Arrow.svg" className="rotate-180 select-none" />*/}
-      {/*</div>*/}
-      {/*<div className="absolute cursor-pointer top-[45%] transition-all  active:opacity-80 z-[10] translate-y-[-50%] right-[22px] bg-[#fff] w-[50px] h-[50px] p-[10px] rounded-[50%]">*/}
-      {/*  <img src="/Arrow.svg" className="select-none" />*/}
-      {/*</div>*/}
       <AnimatePresence>
         {showImage && (
           <ImageFull setShowImage={setShowImage} imgUrl={showImage} />
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

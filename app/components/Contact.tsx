@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -19,7 +20,10 @@ function Contact() {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       className="mt-[65px] min-[1025px]:pt-[100px] bg-[#1d1d1d]/[0.9] pt-[65px] pb-[100px] min-[1025px]:mb-[100px]"
       id="contacts"
     >
@@ -69,7 +73,7 @@ function Contact() {
           </p>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

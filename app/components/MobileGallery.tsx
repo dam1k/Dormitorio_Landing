@@ -3,10 +3,17 @@
 import React from "react";
 import { modelsObj } from "../data";
 import MobileGalleryItem from "./MobileGalleryItem";
+import { motion } from "framer-motion";
 
 export default function MobileGallery() {
   return (
-    <div className="flex flex-col gap-[25px] mb-" id="new-collection">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="flex flex-col gap-[25px] mb-"
+      id="new-collection"
+    >
       {Object.keys(modelsObj).map((detailKey, index) => {
         return (
           <MobileGalleryItem
@@ -21,6 +28,6 @@ export default function MobileGallery() {
           ></MobileGalleryItem>
         );
       })}
-    </div>
+    </motion.div>
   );
 }

@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import About from "../components/About";
+import { motion } from "framer-motion";
 
 const content = {
   copyright: "© Dormitorio 2023. All rights reserved.",
@@ -11,7 +14,10 @@ const content = {
 
 function Footer() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       className="container max-[1024px]:grid-cols-1 grid min-[1025px]:grid-cols-2 gap-[75px] !mb-[100px] max-[1024px]:mt-[75px]"
       id="about"
     >
@@ -36,7 +42,7 @@ function Footer() {
         <p>{content.showRoom}</p>
         <p>{content.copyright}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

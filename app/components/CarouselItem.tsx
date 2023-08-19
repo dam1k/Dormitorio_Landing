@@ -1,5 +1,3 @@
-import ImageFull from "../components/ImageFull";
-import { useState } from "react";
 export default function CarouselItem({
   imgUrl,
   imgTitle,
@@ -45,10 +43,6 @@ export default function CarouselItem({
                 {country}
               </span>
             </h2>
-            {/*<h2 className="text-[25px] flex justify-start gap-[5px]">*/}
-            {/*  {price.toFixed(3)}*/}
-            {/*  <span className="text-[12px]">MDL</span>*/}
-            {/*</h2>*/}
           </div>
           <div className="bg-black/[0.05] shrink-0 flex gap-[5px] rounded-[7px] px-[6px] py-[3px] text-[14px] items-center mt-[10px]">
             <img className="w-[13px] h-[12px]" src="/Size.svg" alt="" />

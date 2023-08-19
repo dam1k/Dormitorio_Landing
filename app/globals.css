@@ -93,36 +93,6 @@ html, body {
   width: 100%;
 }
 
-/*.carousel-card {*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*}*/
-
-/*.carousel-card > .img {*/
-/*  height: 50%;*/
-/*  width: 100%;*/
-/*  border-radius: 15px;*/
-/*  object-fit:cover;*/
-/*}*/
-
-/*.carousel-track {*/
-/*  display: grid;*/
-/*  position: absolute;*/
-/*  grid-template-columns: repeat(6, 1fr);*/
-/*  gap:30px;*/
-/*  left: 0;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  height: 100%;*/
-/*  width: 200%;*/
-/*  animation: slide 20s linear infinite;*/
-/*  &:hover {*/
-/*    animation-play-state: paused;*/
-/*  }*/
-/*}*/
-
 .heading {
   animation: animateHeading 0.5s linear;
 }
@@ -132,17 +102,6 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
   gap:40px;
 }
-
-
-
-/*@keyframes slide {*/
-/*  0% {*/
-/*    left: 0;*/
-/*  }*/
-/*  100% {*/
-/*    left: -100%;*/
-/*  }*/
-/*}*/
 
 @keyframes animateHeading {
   0% {
@@ -156,21 +115,6 @@ html, body {
 }
 
 .gradient_bg {
-/*background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0) 100%);*/
   background: rgba(29,29,29,0.5)
 }
 
-
-/*.paralax {*/
-/*  background-attachment: fixed;*/
-/*  background-position: center;*/
-/*  background-repeat: no-repeat;*/
-/*  background-size: cover;*/
-/*  background-image: url("/public/Dormitor.jpg");*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  position: relative;*/
-/*  top:0;*/
-/*  left:0;*/
-/*  z-index: 10;*/
-/*}*/
