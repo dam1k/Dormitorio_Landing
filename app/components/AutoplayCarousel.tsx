@@ -10,8 +10,8 @@ export default function AutoplayCarousel() {
   const [showImage, setShowImage] = useState("");
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, transform: "translateY(-20px)" }}
+      whileInView={{ opacity: 1, transform: "translateY(0)" }}
       viewport={{ once: true }}
       className="max-[1024px]:hidden !mt-[175px] max-[1024px]:!mt-[65px]"
       id="new-collection"

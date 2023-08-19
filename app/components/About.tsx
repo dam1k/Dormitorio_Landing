@@ -6,8 +6,8 @@ const text = `Dormitorio – un brand de mobilă inspirată din cele mai bune te
 function About() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, transform: "translateY(-20px)" }}
+      whileInView={{ opacity: 1, transform: "translateY(0)" }}
       viewport={{ once: true }}
       className="flex w-full justify-center"
     >

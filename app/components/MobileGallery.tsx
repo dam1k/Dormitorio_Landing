@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 export default function MobileGallery() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, transform: "translateY(-20px)" }}
+      whileInView={{ opacity: 1, transform: "translateY(0)" }}
       viewport={{ once: true }}
       className="flex flex-col gap-[25px] mb-"
       id="new-collection"

@@ -94,7 +94,7 @@ html, body {
 }
 
 .heading {
-  animation: animateHeading 0.5s linear;
+  animation: animateHeading 0.3s linear;
 }
 
 .carousel-grid {
@@ -106,7 +106,7 @@ html, body {
 @keyframes animateHeading {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;

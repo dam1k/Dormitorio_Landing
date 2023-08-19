@@ -31,11 +31,10 @@ const Header = () => {
         </div>
 
         <Link href="/" className="flex-1 flex justify-center">
-          <Image
+          <img
             src="/DormitorioLogo.png"
-            width="175"
-            height="175"
             alt="dormitorio"
+            className="w-[175px]"
           />
         </Link>
 

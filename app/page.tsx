@@ -14,8 +14,8 @@ export default function Home() {
       <Gallery />
       <div className="!mt-[175px] max-[1024px]:!mt-[65px] flex flex-col w-full container">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, transform: "translateY(-20px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0)" }}
           viewport={{ once: true }}
           className="flex justify-between min-[1025px]:justify-end min-[1025px]:gap-[50px] items-start"
         >

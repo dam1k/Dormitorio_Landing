@@ -21,8 +21,8 @@ function Contact() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, transform: "translateY(-20px)" }}
+      whileInView={{ opacity: 1, transform: "translateY(0)" }}
       viewport={{ once: true }}
       className="mt-[65px] min-[1025px]:pt-[100px] bg-[#1d1d1d]/[0.9] pt-[65px] pb-[100px] min-[1025px]:mb-[100px]"
       id="contacts"
