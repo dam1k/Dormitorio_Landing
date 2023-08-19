@@ -16,6 +16,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           className="flex justify-between min-[1025px]:justify-end min-[1025px]:gap-[50px] items-start"
         >
           <span className="text-black/[0.5] text-[12px]">(Collection)</span>
