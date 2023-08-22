@@ -21,7 +21,7 @@ function ImageFull({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed top-0 p-[20px] left-0 w-[100vw] !z-[100]  h-[100vh] bg-[#F0F0F0] flex items-center justify-center"
+      className="fixed top-0 p-[20px] left-0 w-[100vw] !z-[100] h-[100vh] bg-[#F0F0F0] flex items-center justify-center"
       onClick={handleOverlayClick}
     >
       <img className="h-[90vh]" src={imgUrl} alt="" ref={imgRef} />

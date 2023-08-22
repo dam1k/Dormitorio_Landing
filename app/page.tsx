@@ -1,7 +1,7 @@
 "use client";
 
 import Gallery from "@/app/components/Gallery";
-import Slider from "./components/AutoplayCarousel";
+import Slider from "./components/DesktopGallery";
 import MobileGallery from "@/app/components/MobileGallery";
 import Contact from "@/app/components/Contact";
 import About from "./components/About";
