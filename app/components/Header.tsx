@@ -42,8 +42,8 @@ const Header = () => {
           <Link href="#new-collection" onClick={handleScroll}>
             Colecția nouă
           </Link>
-          <div className="flex text-[14px] shrink-0 gap-[7px]">
-            <Image height="30" width="30" alt="" src="/Consultant.svg" />
+          <div className="flex items-center text-[14px] shrink-0 gap-[7px]">
+            <img className="h-[30px] w-[30px]" alt="" src="/Consultant.png" />
             <div className="flex flex-col">
               <span className="text-white">Telefon mobil</span>
               <h3 className="">{phoneNumber}</h3>
