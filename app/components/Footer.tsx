@@ -3,6 +3,7 @@
 import React from "react";
 import About from "../components/About";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const content = {
   copyright: "© Dormitorio 2023. All rights reserved.",
@@ -41,6 +42,23 @@ function Footer() {
         <h2 className="text-[25px]">Showrooms</h2>
         <p>{content.showRoom}</p>
         <p>{content.copyright}</p>
+        <div className="flex items-center gap-[10px]">
+          <Link href="https://www.facebook.com/Dormitorio.md">
+            <img src="/Facebook.svg" />
+          </Link>
+          <Link href="https://www.facebook.com/Dormitorio.md">
+            <img src="/Instagram.svg" />
+          </Link>
+          <Link
+            href="https://www.facebook.com/Dormitorio.md"
+            className="ml-[3px] w-[40px]"
+          >
+            <img src="/Telegram.svg" />
+          </Link>
+          <Link href="https://www.facebook.com/Dormitorio.md">
+            <img src="/Whatsapp.svg" />
+          </Link>
+        </div>
       </div>
     </motion.div>
   );

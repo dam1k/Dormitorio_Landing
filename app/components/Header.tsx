@@ -1,7 +1,6 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const phoneNumber = "(+373) 69 692 069";
 
@@ -34,7 +33,7 @@ const Header = () => {
           <img
             src="/DormitorioLogo.png"
             alt="dormitorio"
-            className="w-[175px]"
+            className="w-[200px]"
           />
         </Link>
 
@@ -42,11 +41,14 @@ const Header = () => {
           <Link href="#new-collection" onClick={handleScroll}>
             Colecția nouă
           </Link>
+          <a href="" download>
+            Descarcă catalog
+          </a>
           <div className="flex items-center text-[14px] shrink-0 gap-[7px]">
             <img className="h-[30px] w-[30px]" alt="" src="/Consultant.png" />
             <div className="flex flex-col">
               <span className="text-white">Telefon mobil</span>
-              <h3 className="">{phoneNumber}</h3>
+              <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
             </div>
           </div>
         </div>
