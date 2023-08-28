@@ -2,17 +2,20 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
 function ImageFull({
-  imgUrl,
+  showImage,
   setShowImage,
 }: {
-  imgUrl: string;
+  showImage: {
+    imgUrl: string;
+    desc: string;
+  };
   setShowImage: any;
 }) {
   const imgRef = useRef<HTMLImageElement>(null);
 
   function handleOverlayClick(e: React.MouseEvent) {
     if (e.target !== imgRef.current) {
-      setShowImage(false);
+      setShowImage({ imgUrl: "", desc: "" });
     }
   }
 
@@ -21,10 +24,11 @@ function ImageFull({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed top-0 p-[20px] left-0 w-[100vw] !z-[100] h-[100vh] bg-[#F0F0F0] flex items-center justify-center"
+      className="fixed top-0 flex-col gap-[20px] p-[20px] left-0 w-[100vw] !z-[100] h-[100vh] bg-[#F0F0F0] flex items-center justify-center"
       onClick={handleOverlayClick}
     >
-      <img className="h-[90vh]" src={imgUrl} alt="" ref={imgRef} />
+      <img className="h-[80vh]" src={showImage.imgUrl} alt="" ref={imgRef} />
+      <p className="text-[18px]">{showImage.desc}</p>
     </motion.div>
   );
 }

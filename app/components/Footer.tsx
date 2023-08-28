@@ -46,7 +46,7 @@ function Footer() {
           <Link href="https://www.facebook.com/Dormitorio.md">
             <img src="/Facebook.svg" />
           </Link>
-          <Link href="https://www.facebook.com/Dormitorio.md">
+          <Link href="https://www.instagram.com/dormitorio_moldova/">
             <img src="/Instagram.svg" />
           </Link>
           <Link

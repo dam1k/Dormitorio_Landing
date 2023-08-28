@@ -5,7 +5,7 @@ function Gallery() {
       <Header />
       <div className="absolute top-0 max-[1024px]:h-[50vh] left-0 z-[1] w-[100vw] h-[100vh] gradient_bg" />
       <img
-        src="/mobila3.jpg"
+        src="/Hero.jpg"
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div className="container">

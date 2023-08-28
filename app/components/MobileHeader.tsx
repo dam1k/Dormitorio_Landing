@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CollectionSelect } from "./Select";
-import MobileMenu from "../components/MobilMenu";
+import MobileMenu from "./MobileMenu";
 import { AnimatePresence } from "framer-motion";
 
 interface item {
