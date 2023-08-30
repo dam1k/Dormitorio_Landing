@@ -54,7 +54,7 @@ function Footer() {
           </a>
           <a
             className="ml-[3px] w-[60px]"
-            href="https://viber:/chat?number=+37360121261"
+            href="viber://chat?number=%2B37369692069"
           >
             <img src="/Viber.svg" />
           </a>
