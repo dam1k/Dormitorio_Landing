@@ -8,7 +8,7 @@ import Link from "next/link";
 const content = {
   copyright: "© Dormitorio 2023. All rights reserved.",
   phone: "(+373) 69 692 069",
-  email: "info@dormtiorio.md",
+  email: "info@dormitorio.md",
   showRoom:
     "Centru comercial Creator MALL, Strada Calea Trușenilor 91, Chișinău",
 };
@@ -46,18 +46,18 @@ function Footer() {
           <Link href="https://www.facebook.com/Dormitorio.md">
             <img src="/Facebook.svg" />
           </Link>
-          <Link href="https://www.instagram.com/dormitorio_moldova/">
+          <Link href="https://www.instagram.com/dormitorio_moldova">
             <img src="/Instagram.svg" />
           </Link>
-          <Link
-            href="https://www.facebook.com/Dormitorio.md"
-            className="ml-[3px] w-[40px]"
-          >
+          <a href="https://t.me/Stilis_home_md" className="ml-[3px] w-[40px]">
             <img src="/Telegram.svg" />
-          </Link>
-          <Link href="https://www.facebook.com/Dormitorio.md">
-            <img src="/Whatsapp.svg" />
-          </Link>
+          </a>
+          <a
+            className="ml-[3px] w-[60px]"
+            href="https://viber:/chat?number=+37360121261"
+          >
+            <img src="/Viber.svg" />
+          </a>
         </div>
       </div>
     </motion.div>

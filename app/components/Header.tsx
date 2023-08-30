@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 
-const phoneNumber = "(+373) 683 31 901";
+const phoneNumber = "(+373) 696 92 069";
 
 function handleScroll(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   e.preventDefault();

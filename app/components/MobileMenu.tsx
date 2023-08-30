@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const phoneNumber: string = "(+373) 683 31 901";
+const phoneNumber: string = "(+373) 696 92 069";
 
 const links = [
   {
