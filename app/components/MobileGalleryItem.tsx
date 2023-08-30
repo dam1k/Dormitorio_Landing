@@ -3,6 +3,7 @@ export default function CarouselItem({
   imgTitle,
   size1,
   size2,
+  desc,
   price,
   country,
 }: {
@@ -12,6 +13,7 @@ export default function CarouselItem({
   size2?: number[];
   price: number;
   country: string;
+  desc: string;
 }) {
   return (
     <div className="min-[1025px]:hidden ">
@@ -34,6 +36,7 @@ export default function CarouselItem({
           </div>
         )}
       </div>
+      <div className="mt-[15px]">{desc}</div>
     </div>
   );
 }

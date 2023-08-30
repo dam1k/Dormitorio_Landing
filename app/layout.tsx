@@ -25,7 +25,6 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta name="mailru-domain" content="6ADAv6HZA8DH8vYy" />
-        <meta name="description" content="Explorează-ți Dormitorul Ideal" />
       </Head>
       <body className={poppins.className}>
         <MobileHeader />

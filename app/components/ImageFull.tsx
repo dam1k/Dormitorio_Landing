@@ -27,7 +27,12 @@ function ImageFull({
       className="fixed top-0 flex-col gap-[20px] p-[20px] left-0 w-[100vw] !z-[100] h-[100vh] bg-[#F0F0F0] flex items-center justify-center"
       onClick={handleOverlayClick}
     >
-      <img className="h-[80vh]" src={showImage.imgUrl} alt="" ref={imgRef} />
+      <img
+        className="object-cover h-[80vh]"
+        src={showImage.imgUrl}
+        alt=""
+        ref={imgRef}
+      />
       <p className="text-[18px]">{showImage.desc}</p>
     </motion.div>
   );
