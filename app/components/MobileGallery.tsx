@@ -23,6 +23,7 @@ export default function MobileGallery() {
             //@ts-ignore
             imgTitle={modelsObj[detailKey].name}
             size1={modelsObj[detailKey].size1}
+            size2={modelsObj[detailKey].size2}
             price={modelsObj[detailKey].price}
             country={modelsObj[detailKey].country}
           ></MobileGalleryItem>

@@ -2,12 +2,14 @@ export default function CarouselItem({
   imgUrl,
   imgTitle,
   size1,
+  size2,
   price,
   country,
 }: {
   imgUrl: any;
   imgTitle: String;
   size1: number[];
+  size2?: number[];
   price: number;
   country: string;
 }) {
@@ -25,6 +27,12 @@ export default function CarouselItem({
           <img className="w-[13px] h-[12px]" src="/Size.svg" alt="" />
           {size1.join(" x ")}
         </div>
+        {size2 && (
+          <div className="ml-[15px] bg-black/[0.05] shrink-0 flex gap-[5px] rounded-[7px] px-[6px] py-[3px] text-[14px] items-center mt-[10px]">
+            <img className="w-[13px] h-[12px]" src="/Size.svg" alt="" />
+            {size2.join(" x ")}
+          </div>
+        )}
       </div>
     </div>
   );

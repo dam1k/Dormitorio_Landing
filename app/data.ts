@@ -1,78 +1,78 @@
 import { nanoid } from "nanoid";
-
-export interface model {
-  id: string;
-  name: string;
-  country: string;
-  size1: number[];
-  size2: number[];
-  stock: number;
-  img: string;
-  price: number;
-}
-
-export const modelsArr: model[] = [
-  {
-    id: nanoid(),
-    name: "Bremen",
-    country: "Italia",
-    size1: [234, 232, 23],
-    size2: [180, 200],
-    stock: 2,
-    img: "/mobila.jpg",
-    price: 29,
-  },
-  {
-    id: nanoid(),
-    name: "Bremen",
-    country: "Italia",
-    size1: [234, 232, 23],
-    size2: [180, 200],
-    stock: 2,
-    img: "/mobila2.jpg",
-    price: 29,
-  },
-  {
-    id: nanoid(),
-    name: "Bremen",
-    country: "Italia",
-    size1: [234, 232, 23],
-    size2: [180, 200],
-    stock: 2,
-    img: "/.jpg",
-    price: 29,
-  },
-  {
-    id: nanoid(),
-    name: "Bremen",
-    country: "Italia",
-    size1: [234, 232, 23],
-    size2: [180, 200],
-    stock: 2,
-    img: "/mobila.jpg",
-    price: 29,
-  },
-  {
-    id: nanoid(),
-    name: "Bremen",
-    country: "Italia",
-    size1: [234, 232, 23],
-    size2: [180, 200],
-    stock: 2,
-    img: "/mobila2.jpg",
-    price: 29,
-  },
-  {
-    id: nanoid(),
-    name: "Bremen",
-    country: "Italia",
-    size1: [234, 232, 23],
-    size2: [180, 200],
-    stock: 2,
-    img: "/mobila3.jpg",
-    price: 29,
-  },
-];
+//
+// export interface model {
+//   id: string;
+//   name: string;
+//   country: string;
+//   size1: number[];
+//   size2: number[];
+//   stock: number;
+//   img: string;
+//   price: number;
+// }
+//
+// export const modelsArr: model[] = [
+//   {
+//     id: nanoid(),
+//     name: "Bremen",
+//     country: "Italia",
+//     size1: [234, 232, 23],
+//     size2: [180, 200],
+//     stock: 2,
+//     img: "/mobila.jpg",
+//     price: 29,
+//   },
+//   {
+//     id: nanoid(),
+//     name: "Bremen",
+//     country: "Italia",
+//     size1: [234, 232, 23],
+//     size2: [180, 200],
+//     stock: 2,
+//     img: "/mobila2.jpg",
+//     price: 29,
+//   },
+//   {
+//     id: nanoid(),
+//     name: "Bremen",
+//     country: "Italia",
+//     size1: [234, 232, 23],
+//     size2: [180, 200],
+//     stock: 2,
+//     img: "/.jpg",
+//     price: 29,
+//   },
+//   {
+//     id: nanoid(),
+//     name: "Bremen",
+//     country: "Italia",
+//     size1: [234, 232, 23],
+//     size2: [180, 200],
+//     stock: 2,
+//     img: "/mobila.jpg",
+//     price: 29,
+//   },
+//   {
+//     id: nanoid(),
+//     name: "Bremen",
+//     country: "Italia",
+//     size1: [234, 232, 23],
+//     size2: [180, 200],
+//     stock: 2,
+//     img: "/mobila2.jpg",
+//     price: 29,
+//   },
+//   {
+//     id: nanoid(),
+//     name: "Bremen",
+//     country: "Italia",
+//     size1: [234, 232, 23],
+//     size2: [180, 200],
+//     stock: 2,
+//     img: "/mobila3.jpg",
+//     price: 29,
+//   },
+// ];
 
 export const modelsObj: any = {
   0: {
@@ -96,7 +96,7 @@ export const modelsObj: any = {
     name: "Corsica",
     country: "Italia",
     size1: [220, 189, 96],
-    imgUrl: "/mobila3.jpg",
+    imgUrl: "/models/Corsica.jpg",
     desc: "Lemn masiv, placaj și MDF pentru cadru interior, cadru exterior acoperit cu pulbere neagră",
   },
   3: {
@@ -147,6 +147,7 @@ export const modelsObj: any = {
     name: "Toscana",
     country: "Italia",
     size1: [231, 224, 93],
+    size2: [231, 204, 93],
     imgUrl: "/models/Toscana.jpg",
     desc: "Lemn masiv, placaj și MDF pentru cadru interior, umplutură bună și tăblie din bumbac",
   },
@@ -171,6 +172,7 @@ export const modelsObj: any = {
     name: "Sevilla",
     country: "Italia",
     size1: [250, 207, 102],
+    size2: [250, 187, 102],
     imgUrl: "/models/Sevilla.jpg",
     desc: "Lemn masiv, placaj (fanera) și MDF pentru structura interioară, cadru din oțel pentru tablia patului, picior cu acoperire din pulbere neagră.",
   },

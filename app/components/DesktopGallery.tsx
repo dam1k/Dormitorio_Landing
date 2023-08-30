@@ -134,6 +134,7 @@ export default function DesktopGallery() {
             //@ts-ignore
             imgTitle={modelsObj[8].name}
             size1={modelsObj[8].size1}
+            size2={modelsObj[8].size2}
             price={modelsObj[8].price}
             country={modelsObj[8].country}
             desc={modelsObj[8].desc}
@@ -173,6 +174,7 @@ export default function DesktopGallery() {
             //@ts-ignore
             imgTitle={modelsObj[11].name}
             size1={modelsObj[11].size1}
+            size2={modelsObj[11].size2}
             price={modelsObj[11].price}
             country={modelsObj[11].country}
             desc={modelsObj[11].desc}
