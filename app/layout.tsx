@@ -3,11 +3,10 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import MobileHeader from "./components/MobileHeader";
 import Footer from "./components/Footer";
-import Head from "next/head";
-export const metadata: Metadata = {
-  title: "Dormitorio Home",
-  description: "Explorează-ți Dormitorul Ideal",
-};
+// export const metadata: Metadata = {
+//   title: "Dormitorio Home",
+//   description: "Explorează-ți Dormitorul Ideal",
+// };
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,9 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
+        <title>Dormitorio Home</title>
         <meta name="mailru-domain" content="6ADAv6HZA8DH8vYy" />
-      </Head>
+        <meta name="description" content="Explorează-ți Dormitorul Ideal" />
+      </head>
       <body className={poppins.className}>
         <MobileHeader />
         {children}
