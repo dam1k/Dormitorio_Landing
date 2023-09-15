@@ -96,7 +96,7 @@ function MobileMenu({ setShowMenu }: { setShowMenu: any }) {
           </div>
 
           <div className="flex fixed items-center left-[15px] right-[15px] bottom-[50px] bg-white rounded-[15px] px-[18px] py-[15px] text-[14px] shrink-0 gap-[7px]">
-            <img className="w-[30px] h-[30px]" alt="" src="/Consultant.png" />
+            {/*<img className="w-[30px] h-[30px]" alt="" src="/Consultant.png" />*/}
             <div className="flex flex-col">
               <span className="text-[11px] text-[#1e1e1e]/[0.35]">
                 Telefon mobil

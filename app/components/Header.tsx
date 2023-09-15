@@ -45,7 +45,7 @@ const Header = () => {
             Descarcă catalog
           </a>
           <div className="flex items-center text-[14px] shrink-0 gap-[7px]">
-            <img className="h-[30px] w-[30px]" alt="" src="/Consultant.png" />
+            {/*<img className="h-[30px] w-[30px]" alt="" src="/Consultant.png" />*/}
             <div className="flex flex-col">
               <span className="text-white">Telefon mobil</span>
               <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
