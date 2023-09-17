@@ -1,21 +1,47 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  const formRef = useRef<HTMLFormElement>(null);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.id);
     if (e.target.id === "name") {
       setName(e.target.value);
     } else if (e.target.id === "email") {
       setEmail(e.target.value);
     } else if (e.target.id === "phone") {
       setPhone(e.target.value);
+    }
+  };
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_w94p4p4",
+          "template_id6hmaz",
+          formRef.current,
+          "uiAgH1ljQejRYlrnh",
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setName("");
+            setPhone("");
+            setEmail("");
+          },
+          (error) => {
+            console.log(error.text);
+          },
+        );
     }
   };
 
@@ -32,14 +58,14 @@ function Contact() {
           Completati formularul pentru a colabora cu noi
         </h1>
         <form
+          ref={formRef}
           className="flex flex-col gap-[10px] flex-1"
-          action="https://formsubmit.co/contact@dormitorio.md"
-          method="POST"
+          onSubmit={sendEmail}
         >
           <input
             type="name"
             id="name"
-            name="name"
+            name="user_name"
             className="bg-[#F0F0F2]/[0.15] text-[14px] w-full rounded-[15px] px-[18px] py-[15px] text-white"
             value={name}
             onChange={handleChange}
@@ -49,7 +75,7 @@ function Contact() {
           <input
             type="email"
             id="email"
-            name="email"
+            name="user_email"
             className="bg-[#F0F0F2]/[0.15] text-[14px] w-full rounded-[15px] px-[18px] py-[15px] text-white"
             value={email}
             onChange={handleChange}
@@ -58,7 +84,7 @@ function Contact() {
           />
           <input
             type="tel"
-            name="tel"
+            name="user_tel"
             pattern="[0-9]{9}"
             required
             id="phone"
