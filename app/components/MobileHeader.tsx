@@ -36,10 +36,19 @@ const MobileHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth > 1024) {
+    setWidth(window.innerWidth);
+
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+
+    return () =>
+      window.removeEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
+  useEffect(() => {
+    if (width > 1024) {
       setShowMenu(false);
     }
-  }, []);
+  }, [width]);
 
   return (
     <>

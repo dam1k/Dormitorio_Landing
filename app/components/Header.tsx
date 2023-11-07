@@ -41,7 +41,7 @@ const Header = () => {
           <Link href="#new-collection" onClick={handleScroll}>
             Colecția nouă
           </Link>
-          <a href="" download>
+          <a href="/Dormitorio.pdf" download>
             Descarcă catalog
           </a>
           <div className="flex items-center text-[14px] shrink-0 gap-[7px]">
