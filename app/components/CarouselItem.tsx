@@ -1,3 +1,7 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function CarouselItem({
   imgUrl,
   imgTitle,
@@ -23,6 +27,11 @@ export default function CarouselItem({
   rowStart?: number;
   setShowImage: any;
 }) {
+  const router = useRouter();
+  function handleImageClick() {
+    setShowImage({ imgUrl, desc, id: imgTitle });
+  }
+
   return (
     <>
       <div
@@ -36,7 +45,7 @@ export default function CarouselItem({
             src={imgUrl}
             className="cursor-pointer w-full min-h-full hover:scale-110 transition-all"
             alt="mobila"
-            onClick={() => setShowImage({ imgUrl, desc })}
+            onClick={handleImageClick}
           />
         </div>
         <div className="flex justify-between w-full items-center">

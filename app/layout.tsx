@@ -3,10 +3,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import MobileHeader from "./components/MobileHeader";
 import Footer from "./components/Footer";
-// export const metadata: Metadata = {
-//   title: "Dormitorio Home",
-//   description: "Explorează-ți Dormitorul Ideal",
-// };
 
 const poppins = Poppins({
   subsets: ["latin"],

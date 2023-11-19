@@ -1,16 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { modelsObj } from "../data";
 import CarouselItem from "./CarouselItem";
 import ImageFull from "./ImageFull";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function DesktopGallery() {
-  const [showImage, setShowImage] = useState({
+  const [showImage, setShowImage] = useState<{ desc: string; imgUrl: string }>({
     desc: "",
     imgUrl: "",
   });
+
   return (
     <>
       <motion.div

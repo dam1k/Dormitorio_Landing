@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 function ImageFull({
   showImage,
   setShowImage,
@@ -27,6 +27,13 @@ function ImageFull({
       className="fixed top-0 flex-col gap-[20px] p-[20px] left-0 w-[100vw] !z-[100] h-[100vh] bg-[#F0F0F0] flex items-center justify-center"
       onClick={handleOverlayClick}
     >
+      {/*<img src="/Times.svg" className="absolute top-0 left-0" alt="" />*/}
+      <button
+        className="absolute top-[50px] bg-white right-[50px] flex items-center justify-center w-[36px] h-[36px] [bg-[#fff] rounded-[7px]"
+        onClick={() => setShowImage({ imgUrl: "", desc: "" })}
+      >
+        <Image alt="" width={20} height={20} src="/Times.svg" />
+      </button>
       <img
         className="object-cover h-[80vh]"
         src={showImage.imgUrl}

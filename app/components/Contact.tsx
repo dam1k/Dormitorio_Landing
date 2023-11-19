@@ -33,7 +33,6 @@ function Contact() {
         )
         .then(
           (result) => {
-            console.log(result.text);
             setName("");
             setPhone("");
             setEmail("");

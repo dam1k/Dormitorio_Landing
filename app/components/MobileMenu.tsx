@@ -45,7 +45,6 @@ function MobileMenu({ setShowMenu }: { setShowMenu: any }) {
         behavior: "smooth",
       });
     }
-
     setShowMenu(false);
   }
 

@@ -1,7 +1,10 @@
 import Header from "../components/Header";
 function Gallery() {
   return (
-    <div className="relative w-[100vw] max-[1024px]:h-[50vh] h-[100vh]">
+    <div
+      id="top"
+      className="relative w-[100vw] max-[1024px]:h-[50vh] h-[100vh]"
+    >
       <Header />
       <div className="absolute top-0 max-[1024px]:h-[50vh] left-0 z-[1] w-[100vw] h-[100vh] gradient_bg" />
       <img
