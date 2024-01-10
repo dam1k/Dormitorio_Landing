@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function CarouselItem({
   imgUrl,
@@ -27,7 +28,6 @@ export default function CarouselItem({
   rowStart?: number;
   setShowImage: any;
 }) {
-  const router = useRouter();
   function handleImageClick() {
     setShowImage({ imgUrl, desc, id: imgTitle });
   }
@@ -41,11 +41,21 @@ export default function CarouselItem({
       ${rowStart && rowStart === 4 ? "row-start-4" : ""}`}
       >
         <div className="overflow-hidden rounded-[15px] w-full">
-          <img
+          {/*<img*/}
+          {/*  src={imgUrl}*/}
+          {/*  className="cursor-pointer w-full min-h-full hover:scale-110 transition-all"*/}
+          {/*  alt="mobila"*/}
+          {/*  onClick={handleImageClick}*/}
+          {/*/>*/}
+          <Image
             src={imgUrl}
-            className="cursor-pointer w-full min-h-full hover:scale-110 transition-all"
+            width={1000}
+            height={1000}
+            style={{ width: "100%", objectFit: "cover" }}
+            quality={90}
             alt="mobila"
             onClick={handleImageClick}
+            className="cursor-pointer hover:scale-110 transition-all"
           />
         </div>
         <div className="flex justify-between w-full items-center">

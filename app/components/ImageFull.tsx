@@ -28,18 +28,30 @@ function ImageFull({
       onClick={handleOverlayClick}
     >
       {/*<img src="/Times.svg" className="absolute top-0 left-0" alt="" />*/}
-      <button
-        className="absolute top-[50px] bg-white right-[50px] flex items-center justify-center w-[36px] h-[36px] [bg-[#fff] rounded-[7px]"
-        onClick={() => setShowImage({ imgUrl: "", desc: "" })}
-      >
-        <Image alt="" width={20} height={20} src="/Times.svg" />
-      </button>
-      <img
-        className="object-cover h-[80vh]"
-        src={showImage.imgUrl}
-        alt=""
-        ref={imgRef}
-      />
+
+      {/*<img*/}
+      {/*  className="object-cover h-[80vh]"*/}
+      {/*  src={showImage.imgUrl}*/}
+      {/*  alt=""*/}
+      {/*  ref={imgRef}*/}
+      {/*/>*/}
+      <div className="relative">
+        <button
+          className="absolute top-0 bg-white right-[-50px] flex items-center justify-center w-[36px] h-[36px] [bg-[#fff] rounded-[7px]"
+          onClick={() => setShowImage({ imgUrl: "", desc: "" })}
+        >
+          <Image alt="" width={20} height={20} src="/Times.svg" />
+        </button>
+        <Image
+          src={showImage.imgUrl}
+          width={1000}
+          height={1000}
+          ref={imgRef}
+          style={{ width: "100%", objectFit: "cover", height: "80vh" }}
+          quality={90}
+          alt="mobila"
+        />
+      </div>
       <p className="text-[18px]">{showImage.desc}</p>
     </motion.div>
   );

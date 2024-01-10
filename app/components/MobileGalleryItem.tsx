@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CarouselItem({
   imgUrl,
   imgTitle,
@@ -17,7 +19,14 @@ export default function CarouselItem({
 }) {
   return (
     <div className="min-[1025px]:hidden ">
-      <img src={imgUrl} alt="mobila" className="rounded-[10px]" />
+      <Image
+        src={imgUrl}
+        width={1000}
+        height={1000}
+        style={{ width: "100%", objectFit: "cover" }}
+        alt="mobila"
+        className="rounded-[10px]"
+      />
       <div className="flex items-center">
         <div className="flex justify-between w-full mt-[15px]">
           <h2 className="text-[25px] flex justify-start gap-[5px]">

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const content = {
-  copyright: "© Dormitorio 2023. All rights reserved.",
+  copyright: "© Dormitorio 2024. All rights reserved.",
   phone: "(+373) 69 692 069",
   email: "info@dormitorio.md",
   showRoom:
